@@ -72,7 +72,7 @@ onMounted(() => {
     <form @submit.prevent>
       <div class="auth">
         <div class="row">
-          <h1>Авторизация</h1>
+          <h1>Authorization</h1>
         </div>
         <div class="row">
           <input type="text" placeholder="username" autofocus
@@ -83,7 +83,7 @@ onMounted(() => {
             v-model="password" @keypress="clearNotice"/>
         </div>
         <div class="row">
-          <button @click="login">Войти</button>
+          <button @click="login">Login</button>
           <div class="notice">{{ notice }}</div>
         </div>
       </div>
