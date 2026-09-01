@@ -17,7 +17,7 @@ function clearNotice() {
 // Обновление токенов.
 function refreshTokens() {
   fetch(import.meta.env.VITE_REFRESH_URL, {
-    credentials: 'same-origin'
+    credentials: 'include'
   }).then((res) => {
     if (res.ok) {
       res.json().then((body) => {
