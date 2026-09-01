@@ -8,6 +8,7 @@ const secret = ref("")
 // Получение секрета.
 async function getSecret() {
   fetch(import.meta.env.VITE_SECRET_URL, {
+    credentials: 'omit',
     headers: {
       'Authorization': `Bearer ${store.accessToken}`
     }
@@ -23,7 +24,9 @@ async function getSecret() {
 
 // Разлогинивание.
 function logout() {
-  fetch(import.meta.env.VITE_LOGOUT_URL).then((res) => {
+  fetch(import.meta.env.VITE_LOGOUT_URL, {
+    credentials: 'omit',
+  }).then((res) => {
     res.json().then((body) => {
       if (res.ok) {
         store.accessToken = ''
