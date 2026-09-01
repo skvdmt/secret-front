@@ -28,11 +28,18 @@ function refreshTokens() {
   })
 }
 
+// Перевод строки в бинарное состояние.
+function toBinaryStr(str) {
+  const encoder = new TextEncoder();
+  const charCodes = encoder.encode(str);
+  return String.fromCharCode(...charCodes);
+}
+
 // Авторизация.
 function login() {
   fetch(import.meta.env.VITE_LOGIN_URL, {
     headers: {
-      'Authorization': 'Basic ' + btoa(username.value + ":" + password.value)
+      'Authorization': 'Basic ' + btoa(toBinaryStr(username.value + ":" + password.value))
     },
   }).then((res) => {
     res.json().then((body) => {
