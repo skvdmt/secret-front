@@ -8,6 +8,7 @@ const secret = ref("")
 // Получение секрета.
 async function getSecret() {
   fetch(import.meta.env.VITE_SECRET_URL, {
+    credentials: 'omit',
     headers: {
       'Authorization': `Bearer ${store.accessToken}`
     }

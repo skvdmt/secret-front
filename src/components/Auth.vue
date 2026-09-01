@@ -17,7 +17,7 @@ function clearNotice() {
 // Обновление токенов.
 function refreshTokens() {
   fetch(import.meta.env.VITE_REFRESH_URL, {
-    credentials: 'include'
+    credentials: 'same-origin'
   }).then((res) => {
     if (res.ok) {
       res.json().then((body) => {
@@ -33,6 +33,7 @@ function refreshTokens() {
 // Авторизация.
 function login() {
   fetch(import.meta.env.VITE_LOGIN_URL, {
+    credentials: 'omit',
     headers: {
       'Authorization': 'Basic ' + btoa(username.value + ":" + password.value)
     },
