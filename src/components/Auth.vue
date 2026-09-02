@@ -72,7 +72,7 @@ onMounted(() => {
     <form @submit.prevent>
       <div class="auth">
         <div class="row">
-          <h1>Authorization</h1>
+          <h1>Authentication</h1>
         </div>
         <div class="row">
           <input type="text" placeholder="username" autofocus
