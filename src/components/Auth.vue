@@ -103,7 +103,7 @@ onMounted(() => {
     border-radius: 20px;
     margin: 20px;
     padding: 30px;
-    width: 400px;
+    min-width: 400px;
     background: white;
     .row {
       display: flex;
