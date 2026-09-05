@@ -105,7 +105,7 @@ onMounted(() => {
     padding: 30px;
     width: 400px;
     @media (max-width: 440px) {
-      width: 100%;
+      width: auto;
     }
     background: white;
     .row {
