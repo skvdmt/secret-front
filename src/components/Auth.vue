@@ -103,7 +103,10 @@ onMounted(() => {
     border-radius: 20px;
     margin: 20px;
     padding: 30px;
-    max-width: 400px;
+    width: 400px;
+    @media (max-width: 440px) {
+      width: 100%;
+    }
     background: white;
     .row {
       display: flex;
