@@ -1,6 +1,6 @@
 # secret-front
 
-### Trandlations
+### Translations
 
 [En](./README.md)
 
